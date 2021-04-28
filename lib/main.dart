@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gmail_redesign/utils/constants.dart';
 import 'package:gmail_redesign/utils/routes.dart';
 
 void main() {
@@ -9,10 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Gmail Redesign',
+      theme: kAppTheme,
       initialRoute: initialRoute,
       routes: appRoutes,
     );
