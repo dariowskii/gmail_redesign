@@ -9,9 +9,11 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
+          // Sidebar
           Expanded(
             child: Sidebar(),
           ),
+          // Mail list
           Expanded(
             flex: 2,
             child: Container(
@@ -19,6 +21,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(),
             ),
           ),
+          // Mail view
           Expanded(
             flex: 3,
             child: Container(
