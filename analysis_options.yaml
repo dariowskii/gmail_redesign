@@ -1,0 +1,5 @@
+include: package:lint/analysis_options.yaml
+
+lint:
+  rules:
+    prefer_const_constructor: true
