@@ -59,21 +59,27 @@ class FavoriteUser extends StatelessWidget {
                 ],
               ),
             ),
-            if (urlAvatarImg == null)
-              Container(
-                height: 20,
-                width: 20,
-                decoration: const BoxDecoration(
-                  color: kBlueNotificationColor,
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                ),
-                child: Center(
-                  child: Text(
-                    fullName.substring(0, 1),
-                    style: const TextStyle(fontSize: 12, color: Colors.white),
-                  ),
-                ),
+            Container(
+              height: 20,
+              width: 20,
+              decoration: const BoxDecoration(
+                color: kBlueNotificationColor,
+                borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
+              child: (urlAvatarImg == null)
+                  ? Center(
+                      child: Text(
+                        fullName.substring(0, 1),
+                        style:
+                            const TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    )
+                  : Image.network(
+                      urlAvatarImg,
+                      width: 20,
+                      height: 20,
+                    ),
+            )
           ],
         ),
       ),
