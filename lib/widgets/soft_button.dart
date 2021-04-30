@@ -8,7 +8,6 @@ class SoftButton extends StatelessWidget {
     this.borderRadius = 10,
     this.color = Colors.white,
     this.textColor = const Color(0xFF424242),
-    this.icon,
   })  : assert(textButton != null),
         assert(borderRadius != null),
         assert(color != null),
@@ -16,7 +15,6 @@ class SoftButton extends StatelessWidget {
 
   final double borderRadius;
   final Color color, textColor;
-  final Icon icon;
   final String textButton;
 
   @override
@@ -40,10 +38,11 @@ class SoftButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (icon != null) ...[
-              icon,
-              kSized10W,
-            ],
+            Image.asset(
+              'images/add_icon.png',
+              scale: 1.5,
+            ),
+            kSized15W,
             Text(
               textButton,
               style: kFont14Bold.copyWith(color: textColor),
