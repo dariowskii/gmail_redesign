@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gmail_redesign/widgets/sidebar.dart';
 
 class HomeScreen extends StatelessWidget {
-  static const String id = 'homeScreen';
+  static const String id = '/';
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           // Sidebar
           Expanded(
-            child: Sidebar(),
+            child: SingleChildScrollView(child: Sidebar()),
           ),
           // Mail list
           Expanded(

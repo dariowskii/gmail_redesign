@@ -3,9 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 // App Theme
 ThemeData kAppTheme = ThemeData(
-  primarySwatch: Colors.blue,
   textTheme: GoogleFonts.latoTextTheme().apply(displayColor: Colors.black54),
 );
+
+// Colors
+
+const Color kGmailTitleColor = Color(0xFF9E9E9E);
+const Color kBlueNotificationColor = Colors.blue;
 
 // Text Styles
 const TextStyle kFont14Bold =
@@ -28,3 +32,10 @@ const SizedBox kSized15W = SizedBox(width: 15);
 const SizedBox kSized20W = SizedBox(width: 20);
 const SizedBox kSized30W = SizedBox(width: 30);
 const SizedBox kSized40W = SizedBox(width: 40);
+
+const EdgeInsetsGeometry kPaddingH8 = EdgeInsets.symmetric(horizontal: 8.0);
+const EdgeInsetsGeometry kPaddingH16 = EdgeInsets.symmetric(horizontal: 16.0);
+const EdgeInsetsGeometry kPaddingV16 = EdgeInsets.symmetric(vertical: 16.0);
+const EdgeInsetsGeometry kPaddingL16 = EdgeInsets.only(left: 16.0);
+const EdgeInsetsGeometry kPadding16 = EdgeInsets.all(16);
+const EdgeInsetsGeometry kPadding32 = EdgeInsets.all(32);
