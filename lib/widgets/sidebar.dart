@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gmail_redesign/utils/constants.dart';
+import 'package:gmail_redesign/utils/data.dart';
+import 'package:gmail_redesign/widgets/favorite_contact_button.dart';
+import 'package:gmail_redesign/widgets/favorite_user.dart';
 import 'package:gmail_redesign/widgets/sidebar_element.dart';
 import 'package:gmail_redesign/widgets/soft_button.dart';
 import 'package:websafe_svg/websafe_svg.dart';
@@ -8,8 +11,7 @@ class Sidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[100],
-      padding: kPaddingV16,
+      padding: kPaddingT16,
       child: Column(
         children: [
           Padding(
@@ -47,6 +49,31 @@ class Sidebar extends StatelessWidget {
             text: 'Spam',
             hasNotification: true,
             numNotification: 12,
+          ),
+          kSized20H,
+          Column(
+            children: [
+              const Divider(
+                height: 3,
+              ),
+              kSized10H,
+              const FavoriteContactsButton(),
+              kSized10H,
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                padding: const EdgeInsets.only(bottom: 70),
+                shrinkWrap: true,
+                itemCount: avatars.length,
+                itemBuilder: (context, index) {
+                  return FavoriteUser(
+                    fullName: avatars[index]['name'] as String,
+                    category: avatars[index]['category'] as String,
+                    urlAvatarImg: avatars[index]['urlAvatarImg'] as String,
+                    isOnline: avatars[index]['isOnline'] as bool,
+                  );
+                },
+              ),
+            ],
           ),
         ],
       ),

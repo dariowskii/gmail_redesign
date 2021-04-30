@@ -19,21 +19,23 @@ class SoftButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
-      child: Container(
-        padding: const EdgeInsets.all(8),
-        decoration: BoxDecoration(
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
+        color: color,
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            spreadRadius: 1,
+            blurRadius: 10,
+          )
+        ],
+      ),
+      child: MaterialButton(
+        onPressed: () {},
+        padding: kPadding16,
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
-          color: color,
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black12,
-              spreadRadius: 1,
-              blurRadius: 10,
-            )
-          ],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
