@@ -63,13 +63,14 @@ class Sidebar extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 padding: const EdgeInsets.only(bottom: 70),
                 shrinkWrap: true,
-                itemCount: avatars.length,
+                itemCount: favoriteAvatars.length,
                 itemBuilder: (context, index) {
                   return FavoriteUser(
-                    fullName: avatars[index]['name'] as String,
-                    category: avatars[index]['category'] as String,
-                    urlAvatarImg: avatars[index]['urlAvatarImg'] as String,
-                    isOnline: avatars[index]['isOnline'] as bool,
+                    fullName: favoriteAvatars[index]['name'] as String,
+                    category: favoriteAvatars[index]['category'] as String,
+                    urlAvatarImg:
+                        favoriteAvatars[index]['urlAvatarImg'] as String,
+                    isOnline: favoriteAvatars[index]['isOnline'] as bool,
                   );
                 },
               ),
