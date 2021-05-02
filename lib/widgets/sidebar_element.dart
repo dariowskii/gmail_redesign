@@ -5,11 +5,10 @@ class SidebarElement extends StatelessWidget {
   const SidebarElement({
     Key key,
     @required this.text,
-    @required this.hasNotification,
+    this.hasNotification = false,
     this.numNotification,
     this.isActive = false,
   })  : assert(text != null),
-        assert(hasNotification != null),
         assert((hasNotification == true && numNotification > 0) ||
             numNotification == null),
         super(key: key);

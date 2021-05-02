@@ -12,6 +12,8 @@ const Color kGmailTitleColor = Color(0xFF9E9E9E);
 const Color kBlueNotificationColor = Colors.blue;
 
 // Text Styles
+const TextStyle kFont10 = TextStyle(fontSize: 10);
+const TextStyle kFont14 = TextStyle(fontSize: 14);
 const TextStyle kFont14Bold =
     TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
 const TextStyle kFont16 = TextStyle(fontSize: 16);

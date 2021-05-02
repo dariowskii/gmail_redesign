@@ -41,40 +41,35 @@ class Sidebar extends StatelessWidget {
             numNotification: 4,
             isActive: true,
           ),
-          const SidebarElement(text: 'Starred', hasNotification: false),
-          const SidebarElement(text: 'Snoozed', hasNotification: false),
-          const SidebarElement(text: 'Sent', hasNotification: false),
-          const SidebarElement(text: 'Draft', hasNotification: false),
+          const SidebarElement(text: 'Starred'),
+          const SidebarElement(text: 'Snoozed'),
+          const SidebarElement(text: 'Sent'),
+          const SidebarElement(text: 'Draft'),
           const SidebarElement(
             text: 'Spam',
             hasNotification: true,
             numNotification: 12,
           ),
           kSized20H,
-          Column(
-            children: [
-              const Divider(
-                height: 3,
-              ),
-              kSized10H,
-              const FavoriteContactsButton(),
-              kSized10H,
-              ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                padding: const EdgeInsets.only(bottom: 70),
-                shrinkWrap: true,
-                itemCount: favoriteAvatars.length,
-                itemBuilder: (context, index) {
-                  return FavoriteUser(
-                    fullName: favoriteAvatars[index]['name'] as String,
-                    category: favoriteAvatars[index]['category'] as String,
-                    urlAvatarImg:
-                        favoriteAvatars[index]['urlAvatarImg'] as String,
-                    isOnline: favoriteAvatars[index]['isOnline'] as bool,
-                  );
-                },
-              ),
-            ],
+          const Divider(
+            height: 3,
+          ),
+          kSized10H,
+          const FavoriteContactsButton(),
+          kSized10H,
+          ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            padding: const EdgeInsets.only(bottom: 70),
+            shrinkWrap: true,
+            itemCount: favoriteAvatars.length,
+            itemBuilder: (context, index) {
+              return FavoriteUser(
+                fullName: favoriteAvatars[index]['name'] as String,
+                category: favoriteAvatars[index]['category'] as String,
+                urlAvatarImg: favoriteAvatars[index]['urlAvatarImg'] as String,
+                isOnline: favoriteAvatars[index]['isOnline'] as bool,
+              );
+            },
           ),
         ],
       ),
