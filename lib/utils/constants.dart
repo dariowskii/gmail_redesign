@@ -10,6 +10,7 @@ ThemeData kAppTheme = ThemeData(
 
 const Color kGmailTitleColor = Color(0xFF9E9E9E);
 const Color kBlueNotificationColor = Colors.blue;
+const Color kSidebarBackgroundColor = Color(0xFFF5F5F5);
 
 // Text Styles
 const TextStyle kFont10 = TextStyle(fontSize: 10);
