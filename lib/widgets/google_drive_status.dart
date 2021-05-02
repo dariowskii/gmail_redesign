@@ -76,7 +76,7 @@ class GoogleDriveStatus extends StatelessWidget {
                           style: kFont10.copyWith(color: Colors.white),
                         ),
                         Text(
-                          '$percentageStatus %',
+                          '$percentageStatus%',
                           style: kFont10.copyWith(color: kGmailTitleColor),
                         ),
                       ],
